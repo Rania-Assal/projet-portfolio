@@ -17,7 +17,6 @@ export default function Navbar() {
           my <span className="text-pink-500">portfolio</span>
         </h1>
 
-        {/* Hamburger Icon */}
         <div 
           className="md:hidden text-white text-3xl cursor-pointer select-none transition-transform duration-300"
           onClick={toggleMenu}
@@ -26,7 +25,6 @@ export default function Navbar() {
            {isOpen ? <FaTimes /> : <FaBars />}
         </div>
 
-        {/* Links Desktop */}
         <ul className="hidden md:flex gap-10 text-lg font-medium text-white">
           {['/', '/Projects', '/About', '/Contacte'].map((path, i) => (
             <li
@@ -41,7 +39,7 @@ export default function Navbar() {
         </ul>
       </div>
 
-      {/* Mobile Menu */}
+  
       <AnimatePresence>
         {isOpen && (
           <motion.ul
