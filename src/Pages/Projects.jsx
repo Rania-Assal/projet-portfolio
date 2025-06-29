@@ -1,19 +1,33 @@
 import { motion } from 'framer-motion'
 import tastebite from '../assets/images/MyProjects/tastebite.PNG'
 import movies from '../assets/images/MyProjects/movies.PNG'
+import yummy from '../assets/images/MyProjects/yummy.PNG'
+import deliciouse from '../assets/images/MyProjects/deliciouse.PNG'
 
 export default function Projects() {
   const projects = [
+        {
+      title: "Delicious",
+      image: deliciouse,
+      description: "Discover mouth-watering meals and easy-to-follow cooking guides.",
+    },
+       {
+      title: "Yummy",
+      image: yummy,
+      description: "Explore tasty recipes and delicious dishes that will satisfy your cravings.",
+    },
+       {
+      title: "Movies",
+      image: movies,
+      description: "An elegant movie app to browse and explore films with responsive design.",
+    },
     {
       title: "Tastebite",
       image: tastebite,
       description: "Landing page for a restaurant with responsive design.",
     },
-    {
-      title: "Movies",
-      image: movies,
-      description: "An elegant movie app to browse and explore films with responsive design.",
-    },
+ 
+ 
   ]
 
   return (
