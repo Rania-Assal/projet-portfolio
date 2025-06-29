@@ -16,9 +16,9 @@ export default function About() {
   ]
 
   return (
-    <section className="py-40 bg-gradient-to-br from-green-900 via-black to-green-800 text-white px-6 md:px-20">
+    <section className="py-20 md:py-40 bg-gradient-to-br from-green-900 via-black to-green-800 text-white px-6 md:px-20">
       <motion.h2
-        className="text-4xl font-bold mb-12 text-center"
+        className="text-3xl md:text-4xl font-bold mb-10 md:mb-12 text-center"
         initial={{ opacity: 0, y: -40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -26,32 +26,32 @@ export default function About() {
         About Me
       </motion.h2>
 
-      <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
+      <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-10">
         <motion.img
           src={women}
           alt="Development Illustration"
-          className="w-64 h-64 rounded-xl shadow-lg"
+          className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-xl shadow-lg mx-auto md:mx-0"
           initial={{ opacity: 0, x: -80 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         />
 
         <motion.div
-          className="md:flex-1"
+          className="md:flex-1 text-center md:text-left"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
         >
-          <p className="mb-4 text-gray-300 leading-relaxed">
+          <p className="mb-4 text-gray-300 leading-relaxed text-sm sm:text-base">
             Hello! I’m Rania Assal, a Frontend Developer passionate about building beautiful, performant, and accessible websites.
           </p>
-          <p className="mb-8 text-gray-400">
+          <p className="mb-8 text-gray-400 text-sm sm:text-base">
             I am always eager to learn new technologies and improve my skills to deliver the best possible solutions.
           </p>
 
-          <h3 className="text-2xl font-semibold mb-6">Skills</h3>
+          <h3 className="text-xl md:text-2xl font-semibold mb-6">Skills</h3>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 sm:gap-6">
             {skills.map((skill, index) => (
               <motion.div
                 key={index}
@@ -63,9 +63,9 @@ export default function About() {
                 <img
                   src={skill.icon}
                   alt={skill.name}
-                  className="w-14 h-14 mb-2 group-hover:scale-110 transition"
+                  className="w-10 h-10 sm:w-14 sm:h-14 mb-2 group-hover:scale-110 transition"
                 />
-                <span className="text-sm text-gray-300 group-hover:text-green-400 transition">
+                <span className="text-xs sm:text-sm text-gray-300 group-hover:text-green-400 transition">
                   {skill.name}
                 </span>
               </motion.div>
